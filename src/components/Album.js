@@ -12,7 +12,8 @@ class Album extends Component {
      this.state = {
       album: album,
       currentSong: album.songs[0],
-      isPlaying: false
+      isPlaying: false,
+      hover: null
      };
 
      this.audioElement = document.createElement('audio');
@@ -41,8 +42,11 @@ class Album extends Component {
      } else {
      	 if (!isSameSong) { this.setSong(song); }     
        this.play();
-     }	 
-   }
+	   }
+	 }
+	 handleHoverChange(song) {
+	 	this.setState({ hover: song });	
+	 }
 
    render() {
      return (
@@ -62,13 +66,26 @@ class Album extends Component {
              <col id="song-duration-column" />
            </colgroup>  
            <tbody>
-           {this.state.album.songs.map((song, index) => 
-	           	<tr key = {song.title + this.state.album.title} onClick={() => this.handleSongClick(song)}>
-	              <td> {index + 1} </td>
-	              <td> {song.title} </td>
-	              <td> {song.duration} </td>
-	            </tr>
-           	)}
+           {this.state.album.songs.map((song, index) => {
+           	  let icon = index + 1;
+           		if (this.state.isPlaying && this.state.currentSong === song) {
+           			icon = <span className = "ion-md-pause"></span>;
+           		} else if (this.state.hover === song || (!this.state.isPlaying && this.state.currentSong === song)) {
+           			icon = <span className = "ion-md-play"></span>;
+           		}
+
+           		return (
+		           	<tr 
+		           		key={song.title + this.state.album.title}
+		           		onClick={() => this.handleSongClick(song)}
+		           		onMouseEnter = {() => this.handleHoverChange(song)} 
+		           		onMouseLeave={() => this.handleHoverChange(null)}>
+		              <td> {icon} </td>
+		              <td> {song.title} </td>
+		              <td> {song.duration} </td>
+		            </tr>
+		          );
+	          })}
            </tbody>
          </table>
        </section>
@@ -77,3 +94,4 @@ class Album extends Component {
  }
 
 export default Album;
+ 
