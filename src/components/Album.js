@@ -48,7 +48,10 @@ class Album extends Component {
 
   handlePrevClick() {
 	  const currentIndex = this.state.album.songs.findIndex(song => this.state.currentSong === song);
-    const newIndex = Math.max(0, currentIndex - 1);
+    let newIndex = currentIndex - 1;
+		if (newIndex < 0  ) {
+    	newIndex =  this.state.album.songs.length -1;
+    } 
 	  const newSong = this.state.album.songs[newIndex];
 	  this.setSong(newSong);
 	  this.play();
