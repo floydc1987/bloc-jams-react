@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import albumData from './../data/albums';
 import PlayerBar from './PlayerBar';
+import './Album.css';
 
 class Album extends Component {
   constructor(props) {
@@ -145,13 +146,18 @@ class Album extends Component {
            		} else if (this.state.hover === song || (!this.state.isPlaying && this.state.currentSong === song)) {
            			icon = <span className = "ion-md-play"></span>;
            		}
+              let className='';
+              if (this.state.currentSong === song) {
+                className = 'Playing';
+              }
 
            		return (
 		           	<tr 
 		           		key={song.title + this.state.album.title}
 		           		onClick={() => this.handleSongClick(song)}
-		           		onMouseEnter = {() => this.handleHoverChange(song)} 
-		           		onMouseLeave={() => this.handleHoverChange(null)}>
+		           		onMouseEnter={() => this.handleHoverChange(song)} 
+		           		onMouseLeave={() => this.handleHoverChange(null)}
+                  className={className}>
 		              <td> {icon} </td>
 		              <td> {song.title} </td>
 		              <td> {this.formatTime(song.duration)} </td>

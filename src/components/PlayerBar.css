@@ -1,0 +1,62 @@
+.player-bar .sliders, #time-control, #volume-control {
+	display: flex;
+	justify-content: center;
+}
+.player-bar #time-control, #volume-control {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.player-bar #time-control {
+	margin-right: 20px;
+}
+.player-bar #volume-control {
+	margin-left: 20px;
+}
+.player-bar .current-time, .total-time {
+	line-height: 21px;
+}
+#volume-control .icon {
+	line-height: 21px;
+}
+.current-time, .ion-md-volume-low {
+	margin-right: 5px;
+}
+.total-time, .ion-md-volume-high {
+	margin-left: 5px;
+} 
+#buttons {
+	display: flex;
+	font-size: 50px;
+}
+#previous, #next {
+	flex: 1;
+}
+span {
+	color: #9c27b0;
+}
+span:hover {
+	color:  #f8e3fc;
+}
+span:active {
+	color: black;
+}
+
+
+@media only screen and (max-width: 600px) {
+ 	.player-bar .sliders {
+ 		display: block;
+ 		padding-top: 20px;
+ 	}
+ 	.player-bar #time-control, #volume-control {
+ 		padding-bottom: 0;
+ 		padding-top: 5px;
+ 	}
+ 	.player-bar #volume-control, .icon {
+ 		flex: 1;
+ 		margin: 0;
+ 	}
+ 	.player-bar #time-control, .current-time, .total-time {
+ 		flex: 1;
+ 		margin: 0;
+ 	}
+}

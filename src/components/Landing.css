@@ -1,0 +1,40 @@
+.ion-md-happy, .ion-md-paper-plane, .ion-md-cloud-upload {
+	font-size: 80px;
+}
+
+.ion-md-happy {
+	color: #03a9f4;
+}
+
+.ion-md-paper-plane {
+	color: #d1d414;
+}
+
+.ion-md-cloud-upload {
+	color: #1de52b;
+}
+
+p {
+	width: 250px;
+	margin: 0 auto;
+	text-align: left;
+}
+
+.point-title {
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.selling-points .point{
+	padding-top: 35px;
+}
+
+@media only screen and (max-width: 600px) {
+  .hero-title {
+    padding-top: 90px;
+  }
+  .point-title {
+  	margin-top: 0;
+  	margin-bottom: 0;
+  }
+}

@@ -8,10 +8,18 @@
 }
 
 .App-header {
-  background-color: #222;
-  height: 150px;
+  background-color:#9c27b0;
   padding: 20px;
   color: white;
+}
+
+.App-header .hero-title {
+  font-size: 2.5em;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  font-weight: bold;
+  color: #FFFFFF;
+  margin: 0 auto;
 }
 
 .App-title {
@@ -25,4 +33,31 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+ 
+.ion-md-home, .ion-md-musical-notes {
+  font-size: 40px;
+  padding: 10px;
+  color: black;
+}
+nav {
+  position: absolute;
+  top: 50px;
+  width: 300px;
+}
+
+
+@media only screen and (max-width: 600px) {
+  .App-header nav {
+    position: absolute;
+    left: 50%;
+    margin-left: -100px;
+    width: 200px;
+    top: 30px;
+  }
+  .App-header .hero-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+    padding-top: 30px;
+  }
 }

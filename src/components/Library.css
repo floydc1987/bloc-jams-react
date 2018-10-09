@@ -1,0 +1,47 @@
+.library {
+	margin-top: 20px;
+}
+
+.albumLink .title {
+	padding-top: 7px;
+	font-size: 25px;
+	color: #9c27b0;
+	font-weight: bold;
+
+}
+
+.albumLink .artist, .numSongs {
+	color: black;
+}
+
+.albumLink .artist {
+	font-size: 20px;
+}
+
+.albumLink .numSongs {
+	padding-bottom: 10px;
+	font-size: 15px;
+}
+
+.albumLink {
+	text-decoration: none;
+}
+.library .album {
+	position: relative;
+}
+.library .album .album-details {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 30px;
+	background: rgba(255,255,255, 0.8);
+}
+
+@media only screen and (max-width: 600px) {
+  img {
+  	width: 65%;
+  }
+  .library .album {
+		margin-top: 15px;
+	}
+}

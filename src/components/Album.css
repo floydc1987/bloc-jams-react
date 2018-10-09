@@ -1,0 +1,70 @@
+.album {
+	margin-top: 40px;
+}
+
+#song-list td {
+	font-size: 25px;
+	border: 1px solid black;
+}
+.album-details #album-title {
+	padding-top: 7px;
+	font-size: 25px;
+	color: #9c27b0;
+	font-weight: bold;
+	margin-bottom: 0;
+
+}
+.album-details #release-info {
+	color: black;
+	padding-bottom: 10px;
+	margin-bottom: 0;
+}
+.album-details .artist {
+	font-size: 20px;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+#song-list {
+	width: 37%;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 5%;
+}
+
+.album #album-info {
+	position: relative;
+}
+.album #album-info .album-details {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 30px;
+	background: rgba(255,255,255, 0.8);
+}
+.album #album-info, #song-list {
+	margin: 20px auto;
+}
+.Playing {
+		background-color: #f8e3fc;
+}
+
+@media only screen and (max-width: 600px) {
+  .album {
+    margin-top: 0;
+    padding-top: 0;
+  }
+  .album-details #album-title {
+  	margin-top: 0;
+  }
+  #song-list {
+  	left: 50%;
+  	width: 65%;
+  }
+  #album-info {
+  	margin-top: 10px;
+  }
+  .album .album-details {
+	top: 10px;
+	}
+}
+

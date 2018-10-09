@@ -9,12 +9,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-        <nav>
-          <Link to='/'>Landing</Link>
-          <Link to='/library'>Library</Link>
-        </nav>
-          <h1>Bloc Jams</h1>
+        <header className="App-header">
+          <h1 className="hero-title">Turn the music up!</h1>
+          <nav>
+            <Link to='/'><span className = "ion-md-home"></span></Link>
+            <Link to='/library'><span className = "ion-md-musical-notes"></span></Link>
+          </nav>
         </header>
         <main>
           <Route exact path="/" component={Landing} />
